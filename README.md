@@ -23,3 +23,5 @@ After cloning the github, you will want to do the following to get the code runn
 - Back in the first terminal, type npm run dev to launch the front-end.
   
 ### After this, the project will be running on your localhost. Typically at http://localhost:3000/
+![image](https://github.com/ShivamGupta92/Module2-Eth-avax-MetaCrafters/assets/70855458/c7b8abda-29fc-4602-a224-d168b822fd5c)
+
