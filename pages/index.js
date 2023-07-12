@@ -74,7 +74,7 @@ export default function HomePage() {
 
   const deposit = async() => {
     if (atm) {
-      let tx = await atm.deposit(1);
+      let tx = await atm.deposit(5);
       await tx.wait()
       getBalance();
     }
@@ -82,7 +82,7 @@ export default function HomePage() {
 
   const withdraw = async() => {
     if (atm) {
-      let tx = await atm.withdraw(1);
+      let tx = await atm.withdraw(2);
       await tx.wait()
       getBalance();
     }
@@ -150,21 +150,30 @@ export default function HomePage() {
     return (
       <>
       <div>
+      
         <p style={{ fontFamily: "sans-serif"}}>Your Account: {account}</p>
-        <p style={{ fontFamily: "sans-serif"}}>Your Balance: {balance} ETH </p>
+        <p style="color:blue"> Wallet Balance: <button onClick={balance}>Balance Inquiry</button></p>
+        // <p style={{ fontFamily: "sans-serif"}}>Your Balance: {balance} ETH </p>
         <p style={{ fontFamily: "sans-serif"}}>Owner Name : {ownerName}</p>
 
         {/* <input type="number" value={depositAmount} onChange={(e) => setDepositAmount(e.target.value)} /> */}
-        <button style={{backgroundColor: '#red'}} onClick={deposit}>Deposit 1 ETH</button>
+        
+        <input type="number" placeholder="Enter ETH to deposit" value={inputA}
+        onChange={handleInputAChange}/>
+        <button style={{backgroundColor: '#green'}} onClick={deposit}>Confirm Deposit ETH</button><br>
+
+  
         {/* window.alert("1 Eth Succrfully deposited "); */}
-        <button style={{backgroundColor: '#yellow'}} onClick={withdraw}>Withdraw 1 ETH</button>
+        <input type="number" placeholder="Enter ETH to withdraw" value={inputB}
+        onChange={handleInputAChange}/>
+        <button background-color: #FF0000; onClick={withdraw}>Conform Withdraw ETH</button>
       </div>
 
       <div>
         <h2>Crypto CLaculator</h2>
-        <p style={{ fontFamily: "sans-serif"}}>ADD : {add}</p>
-        <p style={{ fontFamily: "sans-serif"}}>Sub: {sub}</p>
-        <p style={{ fontFamily: "sans-serif"}}>Multiply: {mult}</p>
+        <p style={{ fontFamily: "sans-serif"}}>Added ether : {add}</p>
+        <p style={{ fontFamily: "sans-serif"}}>Subracted ether: {sub}</p>
+        <p style={{ fontFamily: "sans-serif"}}>Multiplyed ether: {mult}</p>
 
         <input
         type="number"
@@ -178,14 +187,16 @@ export default function HomePage() {
         placeholder="Enter ETH"
         value={inputB}
         onChange={handleInputBChange}
-        />
-
-        <button style={{backgroundColor: "grey"}} onClick={addition}>Add</button>
-        <button style={{backgroundColor: "grey"}} onClick={subtraction}>Sub</button>
-        <button style={{backgroundColor: "grey"}} onClick={multiplication}>Mult</button>
+        /><br>
+          
+        <p>Choose Operation to perform on test network</p>
+          
+        <button style={{backgroundColor: "grey"}} onClick={addition}>+</button>
+        <button style={{backgroundColor: "grey"}} onClick={subtraction}>-</button>
+        <button style={{backgroundColor: "grey"}} onClick={multiplication}>*</button>
 
         <p style={{ fontFamily: "sans-serif"}}> Gas Fee : $0.12 or 0.00006177ETH</p>
-        <p color= "red" style={{ fontFamily: "sans-serif"}}> (Estimated per transsaction)</p>
+        <p color= "red" style={{ fontFamily: "sans-serif"}}> (Estimated per transaction subjected to change)</p>
       </div>
       </>
     )
