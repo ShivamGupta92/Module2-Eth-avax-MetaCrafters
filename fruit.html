@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruit Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .fruit-list {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .fruit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+    
+    .fruit-image {
+      max-width: 150px;
+      max-height: 150px;
+      margin-bottom: 10px;
+    }
+    
+    .fruit-name {
+      font-weight: bold;
+    }
+    
+    .fruit-price {
+      margin-top: 5px;
+    }
+    
+    .buy-button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    .buy-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Fruit Store!</h1>
+  
+  <ul class="fruit-list">
+    <li class="fruit-item">
+      <img class="fruit-image" src="apple.jpg" alt="Apple">
+      <h2 class="fruit-name">Apple</h2>
+      <p class="fruit-price">$1.99 per pound</p>
+      <button class="buy-button" onclick="addToCart('Apple')">Buy</button>
+    </li>
+    
+    <li class="fruit-item">
+      <img class="fruit-image" src="banana.jpg" alt="Banana">
+      <h2 class="fruit-name">Banana</h2>
+      <p class="fruit-price">$0.99 per pound</p>
+      <button class="buy-button" onclick="addToCart('Banana')">Buy</button>
+    </li>
+    
+    <li class="fruit-item">
+      <img class="fruit-image" src="orange.jpg" alt="Orange">
+      <h2 class="fruit-name">Orange</h2>
+      <p class="fruit-price">$1.49 per pound</p>
+      <button class="buy-button" onclick="addToCart('Orange')">Buy</button>
+    </li>
+    
+    <li class="fruit-item">
+      <img class="fruit-image" src="grapes.jpg" alt="Grapes">
+      <h2 class="fruit-name">Grapes</h2>
+      <p class="fruit-price">$2.99 per pound</p>
+      <button class="buy-button" onclick="addToCart('Grapes')">Buy</button>
+    </li>
+    
+    <li class="fruit-item">
+      <img class="fruit-image" src="kiwi.jpg" alt="Kiwi">
+      <h2 class="fruit-name">Kiwi</h2>
+      <p class="fruit-price">$0.79 each</p>
+      <button class="buy-button" onclick="addToCart('Kiwi')">Buy</button>
+    </li>
+    
+    <li class="fruit-item">
+      <img class="fruit-image" src="watermelon.jpg" alt="Watermelon">
+      <h2 class="fruit-name">Watermelon</h2>
+      <p class="fruit-price">$3.99 each</p>
+      <button class="buy-button" onclick="addToCart('Watermelon')">Buy</button>
+    </li>
+  </ul>
+  
+  <script>
+    function addToCart(fruit) {
+      alert("You have added " + fruit + " to your cart!");
+    }
+  </script>
+</body>
+</html>
