@@ -167,6 +167,8 @@ export default function HomePage() {
         <input type="number" placeholder="Enter ETH to withdraw" value={inputB}
         onChange={handleInputAChange}/>
         <button background-color: #FF0000; onClick={withdraw}>Conform Withdraw ETH</button>
+        <p>Visit Our Marketplace to Buy Items with your NFT's </p>
+        <a href="#">Shivam Fruit Shop</a>
       </div>
 
       <div>
