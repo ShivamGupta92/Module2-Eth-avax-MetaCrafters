@@ -64,18 +64,18 @@ contract Assessment {
         return name;
     }
 
-    function addition(uint a, uint b) public pure returns (uint) {
-        return a + b;
+    function addition(uint var1, uint var2) public pure returns (uint) {
+        return var1 + var2;
     
     }
 
-    function subtraction(uint a, uint b) public pure returns (uint) {
-        require(a>=b, "Value of a must be grater than b");
-        return a - b;
+    function subtraction(uint var1, uint var2) public pure returns (uint) {
+        require(var1>=var2, "Value of a must be grater than b");
+        return var1 - var2;
     }
 
-    function multiplication(uint a, uint b) public pure returns (uint) {
-        return a * b;
+    function multiplication(uint var1, uint var2) public pure returns (uint) {
+        return var1 * var2;
     }
 
 }
