@@ -8,6 +8,7 @@
 - Display user's account address.
 - View user's account balance Deposit ETH into the ATM.
 - Withdraw ETH from the ATM.
+- Visit Market Place to buy items with nft
 - Check the owner's name add two values.
 - subtract two values.
 - multiply two values. Please note that the component assumes you have set up and configured MetaMask in your browser.
